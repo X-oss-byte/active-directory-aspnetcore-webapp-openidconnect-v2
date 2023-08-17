@@ -1,0 +1,227 @@
+use x.net to make it compatible 
+
+Merge pull request #723 from Azure-Samples/jennyf/IdWeb2.13.2
+xcross.com query and save files
+seperate: errors files from good ones
+
+1d2768a
+ · 
+2 weeks ago
+History
+
+History
+
+
+
+ master
+
+Breadcrumbsactive-directory-aspnetcore-webapp-openidconnect-v2
+
+
+Top
+Folders and files
+Name	Last commit message	Last commit date
+
+.github
+(Directory)
+Update Id Web packages from 2.12.4 to 2.13.0
+last month
+
+1-WebApp-OIDC
+(Directory)
+Update to Id Web 2.13.2
+2 weeks ago
+
+2-WebApp-graph-user
+(Directory)
+Update to Id Web 2.13.2
+2 weeks ago
+
+3-WebApp-multi-APIs
+(Directory)
+Update to Id Web 2.13.2
+2 weeks ago
+
+4-WebApp-your-API
+(Directory)
+Update to Id Web 2.13.2
+2 weeks ago
+
+5-WebApp-AuthZ
+(Directory)
+Update to Id Web 2.13.2
+2 weeks ago
+
+6-Deploy-to-Azure
+(Directory)
+Update README.md for deploy to Azure with Easy Auth explaination (#500)
+2 years ago
+
+ReadmeFiles
+(Directory)
+Update color font to gray in SVG files (addresing issue #509) (#543)
+2 years ago
+
+.gitignore
+(File)
+2 3 sample update to latest (#645)
+8 months ago
+
+CHANGELOG.md
+(File)
+Initial commit
+5 years ago
+
+CONTRIBUTING.md
+(File)
+Initial commit
+5 years ago
+
+LICENSE
+(File)
+Starting from https://github.com/Azure-Samples/active-directory-dotne…
+5 years ago
+
+LICENSE.md
+(File)
+Initial commit
+5 years ago
+
+README.md
+(File)
+Merge pull request #665 from Azure-Samples/bff-proxy-sample
+3 months ago
+
+build.bat
+(File)
+Preparing Microsoft.Identity.Web for being disributed as a NuGet pack…
+4 years ago
+
+buildAllSlns.proj
+(File)
+Preparing Microsoft.Identity.Web for being disributed as a NuGet pack…
+4 years ago
+README.md
+
+
+languages	page_type	description	products	urlFragment
+csharp
+powershell
+html
+sample
+Learn how to add sign-in users to your web app, and how to call web APIs, either from Microsoft or your own.
+azure
+azure-active-directory
+dotnet
+azure-storage
+aspnet
+ms-graph
+enable-webapp-signin
+Tutorial - Enable your Web Apps to sign-in users and call APIs with the Microsoft identity platform for developers
+
+.NET
+
+About this tutorial
+
+Scope of this tutorial
+
+In this tutorial, you will learn, incrementally, how to add sign-in users to your Web App, and how to call Web APIs, both Microsoft APIs or your own APIs. Finally, you'll learn best practices and how to deploy your app to Azure
+
+Tutorial Overview
+
+Note
+
+We recommend that you right click on the picture above and open it in a new tab, or a new window. You'll see a clickable image:
+
+clicking on a metro/railway station will get you directly to the README.md for the corresponding part of the tutorial (some are still in progress)
+clicking on some of the connectors between stations will get you to an incremental README.md showing how to get from one part of the tutorial to the next (that's for instance the case for the Sign-in ... stations)
+Details of the chapters
+
+In the first chapter you learn how to add signing-in users to your Web App with the Microsoft identity platform for developers (formerly Azure AD v2.0). You'll learn how to use the Microsoft.Identity.Web to secure your Web App with the Microsoft Identity Platform.
+
+Web apps signs-in users
+
+Depending on your business needs, the platform offers you flexibility in terms of what type of users (sign in audience) can sign-in to your application:
+
+If you are a Line of Business (LOB) developer, you'd probably want to only sign-in users in your organization with their work or school accounts.
+If you are an ISV building a software-as-a-service (SaaS) application, you'd want to sign-in users in any Azure AD tenant.
+If you are an an ISV building a software-as-a-service (SaaS) application who wish to sign-in users from both Azure AD tenants and Microsoft consumer Accounts (MSA) you'll want to sign-in users with their work and school accounts or Microsoft personal accounts.
+If your application needs to sign-in users in Azure AD tenants in national and sovereign clouds.
+If your application wants to connect with your customers, or with small business partners, you can have your application sign-in users with their social identities using Microsoft Azure AD B2C.
+Finally, you'll want to let users sign-out from your application, or globally from their browser session.
+If your Web app only needs to sign-in users, in that case you have all you need from the options provided above, but if your app needs to call APIs that you've developed yourselves or popular Microsoft APIs like Microsoft Graph, then the following chapters will help extend your work so far to also call these Web APIs.
+
+Web apps calls Microsoft Graph
+
+Learn how to update your Web app to call Microsoft Graph:
+
+We'd use the the Microsoft.Identity.Web library again to extend the web app to sign-in users and also call Microsoft Graph
+In this chapter we'd explain the token cache and how customize the token cache serialization with different technologies depending on your needs (in-memory cache, Session token cache, SQL Server Cache, Redis Cache)
+Learn how to secure a multi-tenant SaaS application
+Learn how to call Microsoft Graph in national and sovereign clouds.
+Learn how to authenticate users on both the frontend and backend side simultaneously using the Hybrid SPA code flow and call Microsoft Graph.
+Learn how to authenticate users on the backend side and share the authentication state with the frontend side using the Backend for Frontend proxy architecture and call Microsoft Graph.
+Your Web App might also want to call other Web APIs than Microsoft Graph.
+
+Web apps calls Microsoft APIs
+
+Learn how to call popular Azure APIs. This also explains how to handle conditional access, incremental consent and claims challenge:
+
+The Azure Storage API. This is the opportunity to learn about incremental consent, and conditional access, and how to process them.
+The Azure Service Management API. This is the opportunity to learn about admin consent.
+Note that that chapter, as compared to the others, requires you to have an Azure Subscription
+If you wish to secure a Web API of your own, and call it from your clients (Web apps, desktop apps).
+
+Web apps calls Microsoft APIs
+
+Learn how to secure your own Web API and update your Web App to call your own web API
+Learn how to update your B2C Web App to call you own B2C web API
+Learn how to secure a multi-tenant SaaS application with its own Web API
+Once you know how to sign-in users and call Web APIs from your Web App, you might want to restrict part of the application depending on the user having a role in the application or belonging to a group. So far you've learnt how to add and process authentication. Now learn how to add authorization to your Web application, and driving business logic according to roles and group assignments.
+
+based on their application roles
+based on their belonging to Azure AD groups
+If you want to deploy your complete app to Azure. Learn how to do that, along with best practices to ensure security:
+
+Changing the app registration to add more ReplyUris.
+Using certificates instead of client secrets.
+Use Managed identities to get these certificates from KeyVault
+Daemon apps - Out of scope
+
+This tutorial only covers the case the Web App calls a Web API on behalf of a user. If you are interested in Web Apps calling Web APIs with their own identity (daemon Web Apps), please see Build a daemon Web App with Microsoft Identity platform for developers
+
+How to run this sample
+
+Pre-requisites
+
+Install .NET Core for Windows by following the instructions at dot.net/core, which will include Visual Studio.
+An Azure Active Directory (Azure AD) tenant. For more information on how to get an Azure AD tenant, see How to get an Azure AD tenant
+A user account in your Azure AD tenant, or a Microsoft personal account
+Step 1: Clone or download this repository
+
+From your shell or command line:
+
+git clone https://github.com/Azure-Samples/microsoft-identity-platform-aspnetcore-webapp-tutorial
+⚠️ Given that the name of the sample is quite long, and so are the names of the referenced packages, you might want to clone it in a folder close to the root of your hard drive, to avoid file size limitations on Windows.
+We recommend that you start from chapter 1. WebApp signs-in users with Microsoft identity (OIDC) where you will learn how to sign-in users within your own organization
+It's however possible to start at any chapter of the tutorial as the full code is provided in each folder.
+Community Help and Support
+@soucery/synk support 
+Use Stack Overflow to get support from the community. Ask your questions on Stack Overflow first and browse existing issues to see if someone has asked your question before. Make sure that your questions or comments are tagged with [msal dotnet].
+
+If you find a bug in the sample, please raise the issue on GitHub Issues.
+
+To provide a recommendation, visit the following User Voice page.
+
+Consider taking a moment to share your experience with us.
+Contributing
+
+If you'd like to contribute to this sample, see CONTRIBUTING.MD.
+
+This project has adopted the Microsoft Open Source Code of Conduct. For more information, see the Code of Conduct FAQ or contact opencode@microsoft.com with any additional questions or comments.
+
+Other samples and documentation
+
+The documentation for the Microsoft identity platform is available from https://aka.ms/aadv2.
+Other samples for the Microsoft identity platform are available from https://aka.ms/aaddevsamplesv2.
+The conceptual documentation for MSAL.NET is available from https://aka.ms/msalnet.
